@@ -1,0 +1,15 @@
+{
+  "name": "Sato Anti-Infective",
+  "short_name": "Sato Anti-Inf.",
+  "description": "Royafloxacin 500 mg and Saginkgo 120 mg detail aid. For healthcare professionals only.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#001a52",
+  "theme_color": "#001a52",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

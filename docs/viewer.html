@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes">
+<title>Approved leaflets</title>
+<link rel="stylesheet" href="css/app.css">
+<style>
+  body { max-width: none; background: #e9edf2; }
+  .bar .bar-in { max-width: none; }
+  .seg { position: fixed; top: 56px; left: 0; right: 0; z-index: 40; }
+  .pages { padding-top: 116px; max-width: 760px; margin: 0 auto; }
+  .pages .pn { margin: -6px 0 6px; }
+  .shr { display: block; width: 168px; margin: 0 auto 22px; text-align: center; line-height: 36px; border: 1px solid #c9d4de; background: #fff; color: #001a52; font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+  .shr:active { background: #f2f6fb; }
+  .shr i { display: inline-block; width: 12px; height: 12px; margin-right: 8px; vertical-align: -1px; border: 2px solid #001a52; border-top: 0; position: relative; }
+  .shr i:before { content: ""; position: absolute; left: 3px; top: -6px; width: 2px; height: 9px; background: #001a52; }
+  .shr i:after { content: ""; position: absolute; left: 1px; top: -6px; width: 4px; height: 4px; border-left: 2px solid #001a52; border-top: 2px solid #001a52; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+  .shr.all { width: auto; display: inline-block; margin: 0 0 0 8px; padding: 0 12px; line-height: 30px; vertical-align: middle; }
+  .hint { line-height: 30px; }
+  @media (min-width: 700px) { .pages { max-width: 1000px; padding-left: 16px; padding-right: 16px; } }
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#001a52">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Sato Anti-Inf.">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+  <div class="bar"><div class="bar-in">
+    <a class="back" href="index.html" id="back" aria-label="Back"></a>
+    <span class="ttl">Approved leaflets</span>
+    <span class="tag micro">HCP only</span>
+  </div><div class="seam"></div></div>
+  <div class="seg"><a class="r" href="#roya" id="t-roya">Royafloxacin · 8 pages</a><a class="s" href="#sag" id="t-sag">Saginkgo · 2 pages</a></div>
+  <div class="pages" id="pages"></div>
+<script>
+(function () {
+  var docs = { roya: 8, sag: 2 };
+  var names = { roya: 'Royafloxacin 500 mg', sag: 'Saginkgo 120 mg' };
+  // Only the leaflets of the products the chosen speciality sees (js/sp.js).
+  var sp = null;
+  try { sp = window.localStorage.getItem('sato-sp'); } catch (e) {}
+  var allow = { uro: ['roya'], chest: ['roya'], im: ['roya', 'sag'], ent: ['roya', 'sag'], neuro: ['sag'], surg: ['roya'] }[sp] || ['roya', 'sag'];
+  if (allow.length === 1) {
+    document.getElementById(allow[0] === 'roya' ? 't-sag' : 't-roya').style.display = 'none';
+    document.getElementById('t-' + allow[0]).style.width = '100%';
+  }
+  function show() {
+    var d = (location.hash || '#' + allow[0]).substring(1);
+    if (!docs[d] || (',' + allow.join(',') + ',').indexOf(',' + d + ',') < 0) d = allow[0];
+    document.getElementById('t-roya').className = 'r' + (d === 'roya' ? ' on' : '');
+    document.getElementById('t-sag').className = 's' + (d === 'sag' ? ' on' : '');
+    var html = '<div class="hint">Pinch to zoom. These are the approved flyers, unchanged.' +
+               '<a class="shr all" href="sato://share/' + d + '/all"><i></i>Share all ' + docs[d] + ' pages</a></div>';
+    for (var i = 1; i <= docs[d]; i++) {
+      html += '<img src="pages/' + d + '-' + i + '.jpg" alt="' + names[d] + ', page ' + i + '">' +
+              '<div class="pn micro">' + names[d] + ' · page ' + i + ' of ' + docs[d] + '</div>' +
+              '<a class="shr" href="sato://share/' + d + '/' + i + '"><i></i>Share page ' + i + '</a>';
+    }
+    document.getElementById('pages').innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  document.getElementById('back').onclick = function (e) {
+    if (history.length > 1) { e.preventDefault(); history.back(); }
+  };
+  var tabs = [document.getElementById('t-roya'), document.getElementById('t-sag')];
+  for (var t = 0; t < tabs.length; t++) tabs[t].onclick = function (e) { e.preventDefault(); location.replace(this.getAttribute('href')); };
+  window.addEventListener('hashchange', show, false);
+  show();
+})();
+</script>
+<script src="web.js"></script>
+</body>
+</html>

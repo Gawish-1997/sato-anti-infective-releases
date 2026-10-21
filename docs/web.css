@@ -1,0 +1,4 @@
+/* Web version only. */
+.dk-turn { display: none; position: absolute; left: 0; right: 0; bottom: 22px; text-align: center; color: #c9d6ea; font-size: 12px; z-index: 3; pointer-events: none; }
+.dk-turn i { display: inline-block; width: 10px; height: 16px; margin-right: 8px; vertical-align: -3px; border: 2px solid #67c2f6; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+@media (orientation: portrait) { html.web .dk-turn { display: block; } }

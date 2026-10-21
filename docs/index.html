@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<title>Sato Anti-Infective</title>
+<link rel="stylesheet" href="css/app.css">
+<script>document.documentElement.className += " js";</script>
+<script src="js/sp.js"></script>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#001a52">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Sato Anti-Inf.">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+
+<div id="splash"><img src="img/sato-pharma-reverse.png" alt="Sato Pharma"><div class="seam"></div></div>
+
+<div id="sp-pick">
+  <div class="frame"></div><span class="brk tl"></span><span class="brk br"></span>
+  <div class="sp-in">
+    <img class="logo" src="img/sato-pharma-reverse.png" alt="Sato Pharma">
+    <div class="micro eyebrow">Before the visit</div>
+    <h1>Choose the doctor’s speciality</h1>
+    <div class="ruleset"><i></i></div>
+    <a href="#" data-pick="uro"><b>Urology</b><span class="pr"><i class="r">Royafloxacin</i></span><em class="micro">Last used</em></a>
+    <a href="#" data-pick="chest"><b>Chest</b><span class="pr"><i class="r">Royafloxacin</i></span><em class="micro">Last used</em></a>
+    <a href="#" data-pick="im"><b>Internal Medicine / GP</b><span class="pr"><i class="r">Royafloxacin</i><i class="s">Saginkgo</i></span><em class="micro">Last used</em></a>
+    <a href="#" data-pick="ent"><b>ENT</b><span class="pr"><i class="r">Royafloxacin</i><i class="s">Saginkgo</i></span><em class="micro">Last used</em></a>
+    <a href="#" data-pick="neuro"><b>Neurology</b><span class="pr"><i class="s">Saginkgo</i></span><em class="micro">Last used</em></a>
+    <a href="#" data-pick="surg"><b>Surgery</b><span class="pr"><i class="r">Royafloxacin</i></span><em class="micro">Last used</em></a>
+    <div class="micro hcp">For healthcare professionals only</div>
+  </div>
+</div>
+
+<!-- ======================= HOME ======================= -->
+<div class="view" id="home">
+  <div class="bar"><div class="bar-in">
+    <img class="logo" src="img/sato-pharma-reverse.png" alt="Sato Pharma">
+    <a class="sp-chip" id="sp-chip" href="#" aria-label="Change speciality"><span id="sp-chip-t">Speciality</span><i></i></a>
+    <a class="ib find-btn" href="#" aria-label="Search"><i class="i-find"></i></a>
+    <span class="tag micro">HCP only</span>
+  </div><div class="seam"></div></div>
+  <div class="pad-top"></div>
+
+  <div class="field">
+    <div class="frame"></div><span class="brk tl"></span><span class="brk br"></span>
+    <img class="wm" src="img/sato-arabic-navy.png" alt="" style="-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)">
+    <div class="home-hero">
+      <div class="micro eyebrow">Anti-Infective &nbsp;·&nbsp; <span id="sp-eyebrow">ENT</span></div>
+      <h1><span class="nm-r" data-sp="uro chest im ent surg">Royafloxacin</span><span class="plus" data-sp="im ent">+</span><span class="nm-s" data-sp="im ent neuro">Saginkgo</span></h1>
+      <div class="ruleset"><i></i></div>
+      <div class="sub"><span class="nw" data-sp="uro chest im ent surg">Levofloxacin 500 mg</span><i class="dt" data-sp="im ent"> &nbsp;·&nbsp; </i><span class="nw" data-sp="im ent neuro">Ginkgo biloba extract 120 mg</span></div>
+      <div class="packs">
+        <img class="p-roya" data-sp="uro chest im ent surg" src="img/royafloxacin-500-carton.png" alt="Royafloxacin 500 mg carton">
+        <img class="p-sag" data-sp="im ent neuro" src="img/saginkgo-120-carton.png" alt="Saginkgo 120 mg carton">
+      </div>
+      <div class="hcp micro">For healthcare professionals only</div>
+    </div>
+  </div>
+  <div class="seam seam8"></div>
+
+  <div class="foot-white">
+    <img class="wm" src="img/sato-arabic-navy.png" alt="">
+    <div class="micro sec-label"><span data-sp="im ent">Our products</span><span data-sp="uro chest neuro surg">Our product</span></div>
+    <a class="tile r rv" href="#/roya" data-sp="uro chest im ent surg">
+      <span class="rule"></span>
+      <img class="pic" src="img/royafloxacin-500-carton.png" alt="">
+      <div class="nm">Royafloxacin <em class="nw">500 mg</em></div>
+      <div class="gn">Levofloxacin 500 mg · <span class="nw">Film-coated tablets</span></div>
+      <div class="go">Uses · Dose · Safety</div>
+      <span class="chev"></span>
+    </a>
+    <a class="tile s rv" href="#/sag" data-sp="im ent neuro">
+      <span class="rule"></span>
+      <img class="pic" src="img/saginkgo-120-carton.png" alt="">
+      <div class="nm">Saginkgo</div>
+      <div class="gn">Ginkgo biloba leaf extract <span class="nw">120 mg</span></div>
+      <div class="go">Evidence · Benefits · Dose</div>
+      <span class="chev"></span>
+    </a>
+    <div class="micro sec-label" style="margin-top:20px">Approved materials</div>
+    <a class="tile k rv" href="viewer.html#roya" data-leaflets="1">
+      <span class="rule"></span>
+      <img class="pic doc" src="pages/roya-1.jpg" alt="">
+      <div class="nm" style="font-size:19px">Approved leaflets</div>
+      <div class="gn">The approved flyers, page by page. Zoom in and share.</div>
+      <div class="go">View and share</div>
+      <span class="chev"></span>
+    </a>
+    <a class="tile k rv" href="#/roya" data-jump="r-pi" data-sp="uro chest im ent surg">
+      <span class="rule"></span>
+      <img class="pic doc" src="pages/roya-3.jpg" alt="">
+      <div class="nm" style="font-size:19px">Prescribing information</div>
+      <div class="gn">Royafloxacin warnings, side effects and how to report them</div>
+      <div class="go">Read in full</div>
+      <span class="chev"></span>
+    </a>
+  </div>
+
+  <div class="contact">
+    <img src="img/sato-pharma-reverse.png" alt="Sato Pharma">
+    <div class="micro">Sato Pharma</div>
+    Unit No. 4, second floor, Building (8), next to the headquarters of the Mostaqbal Watan Party, Model (N), Square No. (1258G), Sheraton, Nozha, Cairo<br>
+    Phone: <a href="tel:+20220654930">+20 2 2065 4930</a><br>
+    Email: <a href="mailto:info@satopharma.com">info@satopharma.com</a>
+  </div>
+  <div class="ver" id="ver"></div>
+  <div class="base"><span class="l">Sato Pharma</span><span class="r">HCP only</span></div>
+</div>
+
+<!-- ======================= ROYAFLOXACIN ======================= -->
+<div class="view" id="roya">
+  <div class="bar tools"><div class="bar-in">
+    <a class="back" href="#/" data-back="1" aria-label="Back"></a>
+    <span class="ttl">Royafloxacin 500 mg</span>
+    <span class="tag micro">HCP only</span>
+    <a class="ib find-btn" href="#" aria-label="Search"><i class="i-find"></i></a>
+    <a class="ib tz-btn" href="#" aria-label="Text size"><i class="i-tz">A<b>A</b></i></a>
+  </div><div class="seam"></div></div>
+  <div class="chips">
+    <a data-to="r-top" class="on">Overview</a><a data-to="r-key">Key points</a><a data-to="r-ind">Uses</a><a data-to="r-dose">Dose</a><a data-to="r-renal">Kidneys</a><a data-to="r-ci">Do not use</a><a data-to="r-pi">Warnings</a><a data-to="r-ae">Side effects</a><a data-to="r-ref">Approval</a>
+  </div>
+  <div class="pad-chips"></div>
+
+  <span class="anchor" id="r-top"></span>
+  <div class="field">
+    <div class="frame"></div><span class="brk tl"></span><span class="brk br"></span>
+    <div class="p-hero">
+      <div class="micro hcp">For healthcare professionals only</div>
+      <h1>Royafloxacin</h1>
+      <div class="str">500 mg</div>
+      <div class="gen"><b>Levofloxacin 500 mg</b><br>Film-coated tablets</div>
+      <img class="pack" src="img/royafloxacin-500-carton.png" alt="Royafloxacin 500 mg carton">
+      <div class="floor"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+  <div class="facts"><div class="f"><b class="cnt" data-to="3" data-sp="uro im">3</b><b class="cnt" data-to="2" data-sp="chest surg">2</b><b data-sp="ent">1</b><span data-sp="uro chest im surg">Approved uses</span><span data-sp="ent">Approved use</span></div><div class="f"><b data-sp="surg">250–500</b><b data-sp="uro chest im ent">500</b><span>mg per dose</span></div><div class="f"><b data-sp="uro">7–28 days</b><b data-sp="chest im">7–14 days</b><b data-sp="ent">10–14 days</b><b data-sp="surg">3–14 days</b><span>Course length</span></div></div>
+  <div class="seam seam8"></div>
+
+  <span class="anchor" id="r-key"></span>
+  <div class="sec white r-sec kp">
+    <h2><span class="rl"></span>Key points</h2>
+    <p class="kp-lead">Royafloxacin in brief, from the approved leaflet.</p>
+    <ol class="kpl">
+      <li><b>What it is</b>Levofloxacin 500 mg film-coated tablets, for adults.</li>
+      <li data-sp="uro"><b>Approved for</b>Acute pyelonephritis, complicated urinary tract infections, and chronic bacterial prostatitis.</li>
+      <li data-sp="chest"><b>Approved for</b>Flare-ups of COPD including bronchitis, and community-acquired pneumonia.</li>
+      <li data-sp="im"><b>Approved for</b>Community-acquired pneumonia, acute bacterial sinusitis, and complicated skin and soft tissue infections.</li>
+      <li data-sp="surg"><b>Approved for</b>Complicated skin and soft tissue infections, and uncomplicated cystitis.</li>
+      <li data-sp="ent"><b>Approved for</b>Acute bacterial sinusitis.</li>
+      <li data-sp="uro"><b>Dose</b>500 mg once daily: 7–10 days for acute pyelonephritis, 7–14 days for complicated urinary tract infections, and 28 days for chronic bacterial prostatitis.</li>
+      <li data-sp="chest"><b>Dose</b>Flare-ups of COPD: 500 mg once daily for 7–10 days. Pneumonia: 500 mg once or twice daily for 7–14 days.</li>
+      <li data-sp="im"><b>Dose</b>Pneumonia and skin infections: 500 mg once or twice daily for 7–14 days. Sinusitis: 500 mg once daily for 10–14 days.</li>
+      <li data-sp="surg"><b>Dose</b>Skin infections: 500 mg once or twice daily for 7–14 days. Uncomplicated cystitis: 250 mg once daily for 3 days.</li>
+      <li data-sp="ent"><b>Dose</b>Acute bacterial sinusitis: 500 mg once daily for 10–14 days.</li>
+      <li><b>Kidneys</b>Lower the dose when creatinine clearance is 50 ml/min or less. Use the kidney dose finder in the Kidneys section.</li>
+      <li><b>Do not use</b>In children or growing adolescents, in pregnancy, when breast-feeding, or in patients with epilepsy.</li>
+      <li><b>Safety</b>Stop treatment at the first sign of a serious side effect, such as tendon pain or swelling. Avoid use with corticosteroids.</li>
+    </ol>
+    <p class="note">The full approved text follows below.</p>
+  </div>
+
+  <div class="sec white r-sec">
+    <div class="mosaic">
+      <div class="m rv" data-sp="uro surg"><div class="ph" style="background-image:url(img/r-uti.jpg)"><div class="cap">Urinary tract &amp; prostate</div></div></div>
+      <div class="m rv" data-sp="ent im"><div class="ph" style="background-image:url(img/r-sinus.jpg)"><div class="cap">Acute bacterial sinusitis</div></div></div>
+      <div class="m rv" data-sp="chest"><div class="ph" style="background-image:url(img/r-lung.jpg);background-position:30% 50%"><div class="cap">Exacerbation of COPD incl. bronchitis</div></div></div>
+      <div class="m rv" data-sp="chest im"><div class="ph" style="background-image:url(img/r-cap.jpg);background-position:70% 30%"><div class="cap">Community-acquired pneumonia</div></div></div>
+    </div>
+  </div>
+
+  <span class="anchor" id="r-ind"></span>
+  <div class="sec white r-sec"><span class="ix">01</span>
+    <h2><span class="rl"></span>Approved uses</h2>
+    <p>Royafloxacin tablets are indicated in adults for the treatment of the following infections:</p>
+    <ul class="ticks">
+      <li data-sp="uro">Acute pyelonephritis and complicated urinary tract infections</li>
+      <li data-sp="uro">Chronic bacterial prostatitis</li>
+      <li data-sp="-">Inhalation anthrax: post-exposure prophylaxis and curative treatment</li>
+      <li data-sp="ent im">Acute bacterial sinusitis</li>
+      <li data-sp="chest">Acute exacerbation of chronic obstructive pulmonary disease including bronchitis</li>
+      <li data-sp="chest im">Community-acquired pneumonia</li>
+      <li data-sp="im surg">Complicated skin and soft tissue infections</li>
+      <li data-sp="surg">Uncomplicated cystitis</li>
+    </ul>
+    <p style="margin-top:12px">Levofloxacin tablets may also be used to complete a course of therapy in patients who have shown improvement during initial treatment with intravenous levofloxacin.</p>
+    <p class="note">Consideration should be given to official guidance on the appropriate use of antibacterial agents.</p>
+  </div>
+
+  <span class="anchor" id="r-dose"></span>
+  <div class="sec r-sec"><span class="ix">02</span>
+    <h2><span class="rl"></span>How to dose</h2>
+    <p class="note" style="margin-bottom:12px">Dosage in patients with normal renal function (creatinine clearance &gt; 50 ml/min). Daily dose and duration according to severity.</p>
+    <div class="dose rv" data-sp="ent im"><div class="ind">Acute bacterial sinusitis</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">10–14 days</div></div></div>
+    <div class="dose rv" data-sp="chest"><div class="ind">Acute exacerbation of COPD including bronchitis</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">7–10 days</div></div></div>
+    <div class="dose rv" data-sp="chest im"><div class="ind">Community-acquired pneumonia</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once or twice daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">7–14 days</div></div></div>
+    <div class="dose rv" data-sp="uro"><div class="ind">Acute pyelonephritis</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">7–10 days</div></div></div>
+    <div class="dose rv" data-sp="uro"><div class="ind">Complicated urinary tract infections</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">7–14 days</div></div></div>
+    <div class="dose rv" data-sp="surg"><div class="ind">Uncomplicated cystitis</div><div class="kv"><div class="k">Daily dose</div><div class="v">250 mg once daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">3 days</div></div></div>
+    <div class="dose rv" data-sp="uro"><div class="ind">Chronic bacterial prostatitis</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">28 days</div></div></div>
+    <div class="dose rv" data-sp="im surg"><div class="ind">Complicated skin and soft tissue infections</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once or twice daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">7–14 days</div></div></div>
+    <div class="dose rv" data-sp="-"><div class="ind">Inhalation anthrax</div><div class="kv"><div class="k">Daily dose</div><div class="v">500 mg once daily</div></div><div class="kv"><div class="k">Duration</div><div class="v">8 weeks</div></div></div>
+  </div>
+
+  <span class="anchor" id="r-renal"></span>
+  <div class="sec white r-sec"><span class="ix">03</span>
+    <h2><span class="rl"></span>Kidneys, liver and age</h2>
+    <div class="calc" id="calc">
+      <div class="micro calc-k">Kidney dose finder</div>
+      <div class="calc-l">1. Choose the usual dose</div>
+      <div class="calc-seg" id="calc-reg"></div>
+      <div class="calc-l">2. Enter creatinine clearance</div>
+      <div class="calc-in"><input id="calc-crcl" type="number" inputmode="decimal" min="0" max="250" step="any" placeholder="e.g. 35"><span>ml/min</span></div>
+      <a class="calc-est-t" id="calc-est-t" href="#">No result to hand? Work it out from age, weight and creatinine</a>
+      <div class="calc-est" id="calc-est">
+        <div class="calc-row"><label>Age<input id="cg-age" type="number" inputmode="numeric" placeholder="years"></label><label>Weight<input id="cg-wt" type="number" inputmode="decimal" placeholder="kg"></label></div>
+        <div class="calc-row"><label>Serum creatinine<input id="cg-scr" type="number" inputmode="decimal" step="any" placeholder="mg/dL"></label><label>Sex<span class="calc-seg sm" id="cg-sex"><a data-v="m" class="on">Male</a><a data-v="f">Female</a></span></label></div>
+        <div class="calc-note" id="cg-out">Uses the Cockcroft–Gault formula.</div>
+      </div>
+      <div class="calc-res" id="calc-res"><div class="calc-ph">Enter creatinine clearance to see the dose.</div></div>
+      <div class="calc-note">Taken from the approved kidney dosing table below. The final decision rests with the doctor.</div>
+    </div>
+    <h3 style="margin-top:0">Impaired renal function (creatinine clearance ≤ 50 ml/min)</h3>
+    <div class="tbl-wrap"><table class="rt">
+      <tr><th rowspan="2">Creatinine clearance</th><th colspan="3" style="text-align:center">Dosage regimen</th></tr>
+      <tr><th class="sub nw">250 mg/24 h</th><th class="sub nw">500 mg/24 h</th><th class="sub nw">500 mg/12 h</th></tr>
+      <tr><td class="k">First dose</td><td class="hl">250 mg</td><td class="hl">500 mg</td><td class="hl">500 mg</td></tr>
+      <tr><td class="k">20–50 ml/min</td><td><span class="then">then</span> <b class="nw">125 mg/24 h</b></td><td><span class="then">then</span> <b class="nw">250 mg/24 h</b></td><td><span class="then">then</span> <b class="nw">250 mg/12 h</b></td></tr>
+      <tr><td class="k">10–19 ml/min</td><td><span class="then">then</span> <b class="nw">125 mg/48 h</b></td><td><span class="then">then</span> <b class="nw">125 mg/24 h</b></td><td><span class="then">then</span> <b class="nw">125 mg/12 h</b></td></tr>
+      <tr><td class="k">&lt; 10 ml/min (incl. hemodialysis and CAPD)<sup>1</sup></td><td><span class="then">then</span> <b class="nw">125 mg/48 h</b></td><td><span class="then">then</span> <b class="nw">125 mg/24 h</b></td><td><span class="then">then</span> <b class="nw">125 mg/24 h</b></td></tr>
+    </table></div>
+    <p class="note"><sup>1</sup> No additional doses are required after hemodialysis or continuous ambulatory peritoneal dialysis (CAPD).</p>
+    <div class="pop rv"><div class="micro">Liver problems</div><p>No adjustment of dosage is required since levofloxacin is not metabolised to any relevant extent by the liver and is mainly excreted by the kidneys.</p></div>
+    <div class="pop rv"><div class="micro">Older patients</div><p>No adjustment of dosage is required in the elderly, other than that imposed by consideration of renal function.</p></div>
+    <div class="pop rv"><div class="micro">Children</div><p>Levofloxacin is contraindicated in children and growing adolescents.</p></div>
+  </div>
+
+  <span class="anchor" id="r-ci"></span>
+  <div class="sec r-sec"><span class="ix">04</span>
+    <h2><span class="rl"></span>Do not use</h2>
+    <p>Royafloxacin tablets must not be used:</p>
+    <ul class="dots">
+      <li>in patients hypersensitive to levofloxacin or other quinolones or to any of the excipients,</li>
+      <li>in patients with epilepsy,</li>
+      <li>in patients with history of tendon disorders related to fluoroquinolone administration,</li>
+      <li>in children or growing adolescents,</li>
+      <li>during pregnancy,</li>
+      <li>in breast-feeding women.</li>
+    </ul>
+    <h3>Fluoroquinolones should not be used in the following indications:</h3>
+    <ul class="dots">
+      <li>To treat infections that might get better without treatment or are not severe (such as throat infections);</li>
+      <li data-sp="uro">To treat non-bacterial infections, e.g. non-bacterial (chronic) prostatitis;</li>
+      <li data-sp="uro im surg">For preventing traveller’s diarrhoea or recurring lower urinary tract infections (urine infections that do not extend beyond the bladder);</li>
+      <li>To treat mild or moderate bacterial infections unless other antibacterial medicines commonly recommended for these infections cannot be used.</li>
+    </ul>
+  </div>
+
+  <span class="anchor" id="r-pi"></span>
+  <div class="sec white r-sec"><span class="ix">05</span>
+    <h2><span class="rl"></span>Warnings</h2>
+    <div class="alert"><p>The use of levofloxacin should be avoided in patients who have experienced serious adverse reactions in the past when using quinolone or fluoroquinolone containing products. Treatment of these patients with levofloxacin should only be initiated in the absence of alternative treatment options and after careful benefit/risk assessment.</p></div>
+
+    <div class="acc warn rv"><a class="hd">Prolonged, disabling and potentially irreversible serious adverse drug reactions</a><div class="bd">
+      <p>Cases of prolonged (continuing for months or years), disabling and potentially irreversible serious adverse drug reactions affecting different, sometimes multiple, body systems (including musculoskeletal, nervous, psychiatric and senses) have been reported in patients receiving quinolones and fluoroquinolones irrespective of their age and pre-existing risk factors. There are no pharmacological treatments established to be effective treatments of the symptoms of long lasting or disabling side effects associated with fluoroquinolones. Levofloxacin should be discontinued immediately at the first signs or symptoms of any serious adverse reaction and patients should be advised to contact their prescriber for advice, so that symptoms can be appropriately investigated and to avoid further exposure which could potentially worsen adverse reactions.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Risks of resistance</a><div class="bd">
+      <p data-sp="chest im surg">Methicillin-resistant S. aureus are very likely to possess co-resistance to fluoroquinolones, including levofloxacin. Therefore levofloxacin is not recommended for the treatment of known or suspected MRSA infections unless laboratory results have confirmed susceptibility of the organism to levofloxacin (and commonly recommended antibacterial agents for the treatment of MRSA-infections are considered inappropriate).</p>
+      <p data-sp="ent chest im">Levofloxacin may be used in the treatment of Acute Bacterial Sinusitis and Acute Exacerbation of Chronic Bronchitis when these infections have been adequately diagnosed.</p>
+      <p data-sp="uro surg">Resistance to fluoroquinolones of E. coli – the most common pathogen involved in urinary tract infections – varies across the European Union. Prescribers are advised to take into account the local prevalence of resistance in E. coli to fluoroquinolones.</p>
+      <p data-sp="-">Inhalation Anthrax: Use in humans is based on in vitro Bacillus anthracis susceptibility data and on animal experimental data together with limited human data. Treating physicians should refer to national and/or international consensus documents regarding the treatment of anthrax.</p>
+    </div></div>
+
+    <div class="acc warn rv"><a class="hd">Tendinitis and tendon rupture</a><div class="bd">
+      <p>Tendinitis and tendon rupture (especially but not limited to Achilles tendon), sometimes bilateral, may occur as early as within 48 hours of starting treatment with quinolones and fluoroquinolones and have been reported to occur even up to several months after discontinuation of treatment in patients receiving daily doses of 1000 mg levofloxacin. The risk of tendinitis and tendon rupture is increased in older patients, patients with renal impairment, patients with solid organ transplants, and those treated concurrently with corticosteroids. Therefore, concomitant use of corticosteroids should be avoided. Tendinitis was reported in patients with CF receiving (levofloxacin) as an uncommon adverse reaction during clinical trials. The daily dose should be adjusted in elderly patients based on creatinine clearance.</p>
+      <p>At the first sign of tendinitis (e.g. painful swelling, inflammation) the treatment with levofloxacin should be discontinued and alternative treatment should be considered. The affected limb(s) should be appropriately treated (e.g. immobilisation). Corticosteroids should not be used if signs of tendinopathy occur.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Myoclonus</a><div class="bd">
+      <p>Cases of myoclonus have been reported in patients receiving levofloxacin (see section 4.8). The risk of myoclonus is increased in older patients, and in patients with renal impairment if the dose of levofloxacin is not adjusted as per the creatinine clearance.</p>
+      <p>Levofloxacin should be discontinued immediately at the first occurrence of myoclonus and appropriate treatment should be initiated.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Clostridium difficile-associated disease</a><div class="bd">
+      <p>Diarrhea, particularly if severe, persistent and/or bloody, during or after treatment with levofloxacin (including several weeks after treatment), may be symptomatic of Clostridium difficile-associated disease (CDAD). CDAD may range in severity from mild to life threatening, the most severe form of which is pseudomembranous colitis (see section 4.8). It is therefore important to consider this diagnosis in patients who develop serious diarrhoea during or after treatment with levofloxacin. If CDAD is suspected or confirmed, levofloxacin tablets should be stopped immediately and appropriate treatment initiated without delay (e.g. oral metronidazole or vancomycin). Medicinal products inhibiting the peristalsis are contraindicated in this clinical situation.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Patients predisposed to seizures</a><div class="bd">
+      <p>Quinolones may lower the seizure threshold and may trigger seizures. Levofloxacin is contraindicated in patients with a history of epilepsy (see section 4.3) and, as with other quinolones, should be used with extreme caution in patients predisposed to seizures, or concomitant treatment with active substances that lower the cerebral seizure threshold, such as theophylline (see section 4.5). In case of convulsive seizures (see section 4.8), treatment with levofloxacin should be discontinued.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Patients with G-6-phosphate dehydrogenase deficiency</a><div class="bd">
+      <p>Patients with latent or actual defects in glucose-6-phosphate dehydrogenase activity may be prone to hemolytic reactions when treated with quinolone antibacterial agents. Therefore, if levofloxacin has to be used in these patients, potential occurrence of haemolysis should be monitored.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Patients with renal impairment</a><div class="bd">
+      <p>Since levofloxacin is excreted mainly by the kidneys, the dose of levofloxacin tablets should be adjusted in patients with renal impairment.</p>
+    </div></div>
+
+    <div class="acc warn rv"><a class="hd">Hypersensitivity reactions</a><div class="bd">
+      <p>Levofloxacin can cause serious, potentially fatal hypersensitivity reactions (e.g. angioedema to anaphylactic shock), occasionally following the initial dose (see section 4.8). Patients should discontinue treatment immediately and contact their physician or an emergency physician, who will initiate appropriate emergency measures.</p>
+    </div></div>
+
+    <div class="acc warn rv"><a class="hd">Severe cutaneous adverse reactions</a><div class="bd">
+      <p>Severe cutaneous adverse reactions (SCARs) including toxic epidermal necrolysis (TEN: also known as Lyell's syndrome), Stevens Johnson syndrome (SJS) and drug reaction with eosinophilia and systemic symptoms (DRESS), which could be life-threatening or fatal, have been reported with levofloxacin (see section 4.8). At the time of prescription, patients should be advised of the signs and symptoms of severe skin reactions, and be closely monitored. If signs and symptoms suggestive of these reactions appear, levofloxacin should be discontinued immediately and an alternative treatment should be considered. If the patient has developed a serious reaction such as SJS, TEN or DRESS with the use of levofloxacin, treatment with levofloxacin must not be restarted in this patient at any time.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Dysglycaemia</a><div class="bd">
+      <p>As with all quinolones, disturbances in blood glucose, including both hypoglycaemia and hyperglycaemia have been reported, usually in diabetic patients receiving concomitant treatment with an oral hypoglycaemic agent (e.g., glibenclamide) or with insulin. Cases of hypoglycaemic coma have been reported. In diabetic patients, careful monitoring of blood glucose is recommended.</p>
+      <p>Levofloxacin tablets treatment should be stopped immediately if a patient reports blood glucose disturbance and alternative nonfluoroquinolone antibacterial therapy should be considered.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Prevention of photosensitization</a><div class="bd">
+      <p>Photosensitization has been reported with levofloxacin. It is recommended that patients should not expose themselves unnecessarily to strong sunlight or to artificial UV rays (e.g. sunray lamp, solarium), during treatment and for 48 hours following treatment discontinuation in order to prevent photosensitization.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Patients treated with vitamin K antagonists</a><div class="bd">
+      <p>Due to possible increase in coagulation tests (PT/INR) and/or bleeding in patients treated with levofloxacin in combination with a vitamin K antagonist (e.g. warfarin), coagulation tests should be monitored when these drugs are given concomitantly.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Psychotic reactions</a><div class="bd">
+      <p>Psychotic reactions have been reported in patients receiving quinolones, including levofloxacin. In very rare cases these have progressed to suicidal thoughts and self-endangering behavior – sometimes after only a single dose of levofloxacin (see section 4.8). In the event that the patient develops these reactions, levofloxacin should be discontinued immediately at the first signs or symptoms of these reactions and patients should be advised to contact their prescriber for advice.</p>
+      <p>Alternative nonfluoroquinolone antibacterial therapy should be considered, and appropriate measures instituted. Caution is recommended if levofloxacin is to be used in psychotic patients or in patients with a history of psychiatric disease.</p>
+    </div></div>
+
+    <div class="acc warn rv"><a class="hd">QT interval prolongation</a><div class="bd">
+      <p>Caution should be taken when using fluoroquinolones, including levofloxacin, in patients with known risk factors for prolongation of the QT interval such as, for example:</p>
+      <ul class="dots">
+        <li>congenital long QT syndrome</li>
+        <li>concomitant use of drugs that are known to prolong the QT interval (e.g. Class IA and III antiarrhythmic, tricyclic antidepressants, macrolides, antipsychotics)</li>
+        <li>uncorrected electrolyte imbalance (e.g. hypokalemia, hypomagnesemia)</li>
+        <li>cardiac disease (e.g. heart failure, myocardial infarction, bradycardia)</li>
+      </ul>
+      <p style="margin-top:8px">Elderly patients and women may be more sensitive to QTc-prolonging medications. Therefore, caution should be taken when using fluoroquinolones, including levofloxacin, in these populations.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Peripheral neuropathy</a><div class="bd">
+      <p>Cases of sensory or sensorimotor polyneuropathy resulting in paraesthesia, hypoesthesia, dysesthesia, or weakness have been reported in patients receiving quinolones and fluoroquinolones.</p>
+      <p>Patients under treatment with levofloxacin should be advised to inform their doctor prior to continuing treatment if symptoms of neuropathy such as pain, burning, tingling, numbness, or weakness develop in order to prevent the development of potentially irreversible condition.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Hepatobiliary disorders</a><div class="bd">
+      <p>Cases of hepatic necrosis up to fatal hepatic failure have been reported with levofloxacin, primarily in patients with severe underlying diseases, e.g. sepsis (see section 4.8). Patients should be advised to stop treatment and contact their doctor if signs and symptoms of hepatic disease develop such as anorexia, jaundice, dark urine, pruritus or tender abdomen.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Exacerbation of myasthenia gravis</a><div class="bd">
+      <p>Fluoroquinolones, including levofloxacin, have neuromuscular blocking activity and may exacerbate muscle weakness in patients with myasthenia gravis. Postmarketing serious adverse reactions, including deaths and the requirement for respiratory support, have been associated with fluoroquinolone use in patients with myasthenia gravis. Levofloxacin is not recommended in patients with a known history of myasthenia gravis.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Vision disorders</a><div class="bd">
+      <p>If vision becomes impaired or any effects on the eyes are experienced, an eye specialist should be consulted immediately.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Superinfection</a><div class="bd">
+      <p>The use of levofloxacin, especially if prolonged, may result in overgrowth of non-susceptible organisms. If superinfection occurs during therapy, appropriate measures should be taken.</p>
+    </div></div>
+
+    <div class="acc warn rv"><a class="hd">Aortic aneurysm and dissection, and heart valve regurgitation/incompetence</a><div class="bd">
+      <p>Epidemiologic studies report an increased risk of aortic aneurysm and dissection, particularly in elderly patients, and of aortic and mitral valve regurgitation after intake of fluoroquinolones. Cases of aortic aneurysm and dissection, sometimes complicated by rupture (including fatal ones), and of regurgitation/incompetence of any of the heart valves have been reported in patients receiving fluoroquinolones (see section 4.8).</p>
+      <p>Therefore, fluoroquinolones should only be used after a careful benefit-risk assessment and after consideration of other therapeutic options in patients with positive family history of aneurysm disease or congenital heart valve disease, or in patients diagnosed with pre-existing aortic aneurysm and/or dissection or heart valve disease, or in presence of other risk factors or conditions predisposing</p>
+      <ul class="dots">
+        <li>for both aortic aneurysm and dissection and heart valve regurgitation/incompetence (e.g. connective tissue disorders such as Marfan syndrome or Ehlers-Danlos syndrome, Turner syndrome, Behçet’s disease, hypertension, rheumatoid arthritis) or additionally</li>
+        <li>for aortic aneurysm and dissection (e.g. vascular disorders such as Takayasu arteritis or giant cell arteritis, or known atherosclerosis, or Sjögren’s syndrome) or additionally</li>
+        <li>for heart valve regurgitation/incompetence (e.g. infective endocarditis).</li>
+      </ul>
+      <p style="margin-top:8px">The risk of aortic aneurysm and dissection, and their rupture may also be increased in patients treated concurrently with systemic corticosteroids.</p>
+      <p>In case of sudden abdominal, chest or back pain, patients should be advised to immediately consult a physician in an emergency department.</p>
+      <p>Patients should be advised to seek immediate medical attention in case of acute dyspnoea, new onset of heart palpitations, or development of oedema of the abdomen or lower extremities.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Blood disorders</a><div class="bd">
+      <p>Bone marrow failure including leukopenia, neutropenia, pancytopenia, haemolytic anaemia, thrombocytopenia, aplastic anaemia, or agranulocytosis may develop during treatment with levofloxacin (see section 4.8). If any of these blood disorders is suspected, blood counts should be monitored. In case of abnormal results, discontinuation of treatment with levofloxacin should be considered.</p>
+    </div></div>
+
+    <div class="acc rv"><a class="hd">Interference with laboratory tests</a><div class="bd">
+      <p>In patients treated with levofloxacin, determination of opiates in urine may give false-positive results. It may be necessary to confirm positive opiate screens by more specific method.</p>
+      <p data-sp="chest im">Levofloxacin may inhibit the growth of Mycobacterium tuberculosis and, therefore, may give false-negative results in the bacteriological diagnosis of tuberculosis.</p>
+    </div></div>
+
+    <h3 style="margin-top:22px">Pregnancy, breast-feeding and fertility</h3>
+    <div class="pop rv"><div class="micro">Pregnancy</div><p>There are limited amount of data with respect to the use of levofloxacin in pregnant women. Animal studies do not indicate direct or indirect harmful effects with respect to reproductive toxicity (see section 5.3). However, in the absence of human data and due to that experimental data suggest a risk of damage by fluoroquinolones to the weight-bearing cartilage of the growing organism, levofloxacin must not be used in pregnant women.</p></div>
+    <div class="pop rv"><div class="micro">Breast-feeding</div><p>Levofloxacin tablets are contraindicated in breast-feeding women. There is insufficient information on the excretion of levofloxacin in human milk; however other fluoroquinolones are excreted in breast milk. In the absence of human data and due to that experimental data suggest a risk of damage by fluoroquinolones to the weight-bearing cartilage of the growing organism, levofloxacin must not be used in breast-feeding women.</p></div>
+    <div class="pop rv"><div class="micro">Fertility</div><p>Levofloxacin caused no impairment of fertility or reproductive performance in rats.</p></div>
+    <div class="pop rv"><div class="micro">Driving and using machines</div><p>Levofloxacin has minor or moderate influence on the ability to drive and use machines. Some undesirable effects (e.g. dizziness/vertigo, drowsiness, visual disturbances) may impair the patient's ability to concentrate and react, and therefore may constitute a risk in situations where these abilities are of special importance (e.g. driving a car or operating machinery).</p></div>
+  </div>
+
+  <span class="anchor" id="r-ae"></span>
+  <div class="sec r-sec"><span class="ix">06</span>
+    <h2><span class="rl"></span>Side effects</h2>
+    <p>The information given below is based on data from clinical studies in more than 8300 patients and on extensive post marketing experience.</p>
+    <p class="note">Frequencies are defined using the following convention: very common (≥ 1/10), common (≥ 1/100 to &lt; 1/10), uncommon (≥ 1/1,000 to &lt; 1/100), rare (≥ 1/10,000 to &lt; 1/1,000), very rare (&lt; 1/10,000), not known (cannot be estimated from the available data). Within each frequency grouping, undesirable effects are presented in order of decreasing seriousness.</p>
+    <div class="tbl-wrap"><table>
+      <tr><th style="width:42%">System organ class</th><th>Common<br><span style="font-weight:400">(≥ 1/100 to &lt; 1/10)</span></th></tr>
+      <tr><td class="k">Psychiatric disorders</td><td>Insomnia</td></tr>
+      <tr><td class="k">Nervous system disorders</td><td>Headache<br>Dizziness</td></tr>
+      <tr><td class="k">Gastrointestinal disorders</td><td>Diarrhoea<br>Vomiting<br>Nausea</td></tr>
+      <tr><td class="k">Hepatobiliary disorders</td><td>Hepatic enzyme increased (ALT/AST, alkaline phosphatase, GGT)</td></tr>
+      <tr><td class="k">General disorders and administration site conditions</td><td><i>Applies to IV form only:</i> infusion site reaction (pain, reddening)</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:22px">Report a side effect</h3>
+    <p>Healthcare professionals are asked to report any suspected adverse drug reactions to the Egyptian Pharmacovigilance Center (EPVC).</p>
+    <div class="btns"><a class="btn red" href="mailto:pv.followup@edaegypt.gov.eg">Email EPVC</a><a class="btn" href="https://www.edaegypt.gov.eg">EDA website</a><a class="btn ghost" href="tel:15301">Call 15301</a></div>
+    <p class="note" style="margin-top:8px">pv.followup@edaegypt.gov.eg · www.edaegypt.gov.eg</p>
+  </div>
+
+  <span class="anchor" id="r-ref"></span>
+  <div class="sec white r-sec"><span class="ix">07</span>
+    <h2><span class="rl"></span>Approval and reference</h2>
+    <div class="approval rv">
+      <img class="qr" src="img/eda-qr.png" alt="EDA promotional-material record">
+      <div class="micro">EDA approval number</div><div class="val">HF0320B9532/062026</div>
+      <div class="micro">Approval valid until</div><div class="val">16/06/2027</div>
+      <a class="btn" href="https://promat.edaegypt.gov.eg/#/preview/details/b7c84370-4912-11f1-8f37-6579e23e674b">View on EDA website</a>
+    </div>
+    <h3>Reference</h3>
+    <ol class="refs"><li>Egyptian Drug Authority (EDA). Royafloxacin 500 mg film-coated tablets, approved leaflet. Approval date: 15/06/2025.</li></ol>
+    <p class="note">Always read the full prescribing information.</p>
+    <a class="btn ghost" href="viewer.html#roya">Open approved leaflet</a>
+  </div>
+
+  <a class="next rv" href="#/sag" data-sp="im ent"><div class="micro">In combination</div><div class="nm sans">Saginkgo 120 mg<span class="ar"></span></div><img src="img/saginkgo-120-carton.png" alt=""></a>
+  <div class="contact">
+    <div class="micro">Sato Pharma</div>
+    Unit No. 4, second floor, Building (8), next to the headquarters of the Mostaqbal Watan Party, Model (N), Square No. (1258G), Sheraton, Nozha, Cairo<br>
+    Phone: <a href="tel:+20220654930">+20 2 2065 4930</a> · Email: <a href="mailto:info@satopharma.com">info@satopharma.com</a>
+  </div>
+  <div class="base"><span class="l">Royafloxacin 500 mg</span><span class="r">HCP only</span></div>
+</div>
+
+<!-- ======================= SAGINKGO ======================= -->
+<div class="view" id="sag">
+  <div class="bar tools"><div class="bar-in">
+    <a class="back" href="#/" data-back="1" aria-label="Back"></a>
+    <span class="ttl">Saginkgo 120 mg</span>
+    <span class="tag micro">HCP only</span>
+    <a class="ib find-btn" href="#" aria-label="Search"><i class="i-find"></i></a>
+    <a class="ib tz-btn" href="#" aria-label="Text size"><i class="i-tz">A<b>A</b></i></a>
+  </div><div class="seam"></div></div>
+  <div class="chips">
+    <a data-to="s-top" class="on">Overview</a><a data-to="s-key">Key points</a><a data-to="s-vert">Vertigo</a><a data-to="s-tinn">Tinnitus</a><a data-to="s-dose">Dose</a><a data-to="s-ben">Benefits</a><a data-to="s-ref">References</a>
+  </div>
+  <div class="pad-chips"></div>
+
+  <span class="anchor" id="s-top"></span>
+  <div class="field">
+    <div class="frame"></div><span class="brk tl"></span><span class="brk br"></span>
+    <img class="leaf" src="img/leaf-b.png" alt="">
+    <div class="p-hero">
+      <div class="micro hcp">For healthcare professionals only</div>
+      <h1>Saginkgo</h1>
+      <div class="str">120 mg</div>
+      <div class="gen"><b>Ginkgo biloba leaf extract</b><br>(Ginkgo biloba) 120 mg</div>
+      <div class="orbs">
+        <div class="orb o1" style="background-image:url(img/c-brain.jpg)" data-sp="neuro im"></div>
+        <div class="orb o2" style="background-image:url(img/c-ear.jpg)"></div>
+        <div class="orb o3" style="background-image:url(img/c-foot.jpg)" data-sp="neuro im"></div>
+        <div class="orb o4" style="background-image:url(img/c-nerve.jpg)" data-sp="neuro im"></div>
+      </div>
+      <img class="pack" src="img/saginkgo-120-carton.png" alt="Saginkgo 120 mg carton">
+      <div class="floor"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+  <div class="facts"><div class="f"><b class="cnt" data-to="120">120</b><span>mg extract</span></div><div class="f"><b>1–2×</b><span>A day</span></div><div class="f"><b class="cnt" data-to="111629" data-sep="1">111,629</b><span>Patients studied</span></div></div>
+  <div class="seam seam8" style="background:#0384db"></div>
+
+  <span class="anchor" id="s-key"></span>
+  <div class="sec white s-sec kp">
+    <h2><span class="rl"></span>Key points</h2>
+    <p class="kp-lead">Saginkgo in brief, from the approved flyer.</p>
+    <ol class="kpl">
+      <li><b>What it is</b>Ginkgo biloba leaf extract 120 mg.</li>
+      <li><b>Helps with</b>Vertigo and tinnitus, and improves symptoms of dizziness and fatigue.</li>
+      <li><b>Vertigo</b>As effective as betahistine, and better tolerated.<sup>1</sup></li>
+      <li><b>Tinnitus</b>Significantly fewer repeat consultations than with systemic corticosteroids or pentoxifylline, in a study of 111,629 patients.<sup>2</sup></li>
+      <li><b>Dose</b>1–2 times daily.</li>
+      <li data-sp="im"><b>Also</b>Antioxidant. Improves ocular blood flow, peripheral arterial disease and neuropathy, diabetic retinopathy, fertility and sexual function, and cognitive function.</li>
+      <li data-sp="neuro"><b>Also</b>Antioxidant. Improves peripheral arterial disease and neuropathy, and cognitive function.</li>
+      <li data-sp="ent"><b>Also</b>Antioxidant.</li>
+    </ol>
+    <p class="note">References are listed at the end of this page.</p>
+  </div>
+
+  <span class="anchor" id="s-vert"></span>
+  <div class="sec white s-sec"><span class="ix">01</span>
+    <h2><span class="rl"></span>Vertigo</h2>
+    <div class="claim rv">Ginkgo biloba extract is as effective as betahistine in the treatment of vertigo, but was better tolerated<sup>1</sup></div>
+    <p class="note">Response rates, defined as clinician’s global impression (CGI) rated “much improved” or “very much improved”, or patient’s rating of NAS improvement of at least 50%.</p>
+    <div class="chart rv">
+      <svg viewBox="0 0 320 214" xmlns="http://www.w3.org/2000/svg" font-family="Poppins, sans-serif">
+        <defs>
+          <linearGradient id="gE" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b4a8f"/><stop offset="1" stop-color="#2f86d0"/></linearGradient>
+          <linearGradient id="gB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3eaaf0"/><stop offset="1" stop-color="#9fd8fb"/></linearGradient>
+        </defs>
+        <g font-size="9" fill="#69757e" text-anchor="end">
+          <text x="30" y="173">0</text><text x="30" y="155.7">10</text><text x="30" y="138.3">20</text><text x="30" y="121">30</text><text x="30" y="103.7">40</text><text x="30" y="86.3">50</text><text x="30" y="69">60</text><text x="30" y="51.7">70</text><text x="30" y="34.3">80</text><text x="30" y="17">90</text>
+        </g>
+        <g stroke="#e3e9ef" stroke-width="1">
+          <line x1="36" y1="152.7" x2="312" y2="152.7"/><line x1="36" y1="135.3" x2="312" y2="135.3"/><line x1="36" y1="118" x2="312" y2="118"/><line x1="36" y1="100.7" x2="312" y2="100.7"/><line x1="36" y1="83.3" x2="312" y2="83.3"/><line x1="36" y1="66" x2="312" y2="66"/><line x1="36" y1="48.7" x2="312" y2="48.7"/><line x1="36" y1="31.3" x2="312" y2="31.3"/><line x1="36" y1="14" x2="312" y2="14"/>
+        </g>
+        <line x1="36" y1="170" x2="312" y2="170" stroke="#26313f" stroke-width="1"/>
+        <text x="8" y="92" font-size="9" fill="#69757e" transform="rotate(-90 8 92)" text-anchor="middle">(%)</text>
+        <rect class="gbar" x="68" y="33" width="38" height="137" fill="url(#gE)"/>
+        <rect class="gbar" x="108" y="48.7" width="38" height="121.3" fill="url(#gB)"/>
+        <rect class="gbar" x="200" y="33" width="38" height="137" fill="url(#gE)"/>
+        <rect class="gbar" x="240" y="40" width="38" height="130" fill="url(#gB)"/>
+        <g font-size="11" font-weight="600" fill="#0a1322" text-anchor="middle">
+          <text x="107" y="190">CGI change</text><text x="239" y="190">NAS</text>
+        </g>
+      </svg>
+      <div class="legend"><span><i style="background:#1563ad"></i>EGb 761</span><span><i style="background:#6cc3f6"></i>Betahistine</span></div>
+    </div>
+    <div class="callout rv">During the treatment period and a subsequent two-day washout period, Ginkgo biloba was better tolerated, with fewer reported adverse events than betahistine.</div>
+    <p class="note">CGI: clinician’s global impression; NAS: numeric analogue scale.</p>
+  </div>
+
+  <span class="anchor" id="s-tinn"></span>
+  <div class="sec s-sec"><span class="ix">02</span>
+    <h2><span class="rl"></span>Tinnitus</h2>
+    <div class="claim deep rv">Ginkgo biloba stands out as a more effective option, significantly reducing the need for repeat consultations for tinnitus compared with systemic corticosteroids and pentoxifylline<sup>2</sup></div>
+    <div class="stat rv"><div class="n cnt" data-to="111629" data-sep="1">111,629</div><div class="t">patients in the retrospective cohort<sup>2</sup></div></div>
+    <div class="chart rv">
+      <svg viewBox="0 0 320 214" xmlns="http://www.w3.org/2000/svg" font-family="Poppins, sans-serif">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfe6fc"/><stop offset="1" stop-color="#e3f4fe"/></linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1b9ee6"/><stop offset="1" stop-color="#6cc6f8"/></linearGradient>
+          <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1563ad"/><stop offset="1" stop-color="#3a91d8"/></linearGradient>
+        </defs>
+        <g font-size="9" fill="#69757e" text-anchor="end">
+          <text x="34" y="173">0</text><text x="34" y="123">10</text><text x="34" y="73">20</text><text x="34" y="23">30</text>
+        </g>
+        <g stroke="#e3e9ef"><line x1="40" y1="120" x2="312" y2="120"/><line x1="40" y1="70" x2="312" y2="70"/><line x1="40" y1="20" x2="312" y2="20"/></g>
+        <line x1="40" y1="170" x2="312" y2="170" stroke="#26313f"/>
+        <text x="9" y="95" font-size="8.5" fill="#69757e" transform="rotate(-90 9 95)" text-anchor="middle">Repeat consultation (%)</text>
+        <rect class="gbar" x="70" y="57.5" width="54" height="112.5" fill="url(#g1)" stroke="#9fd2f3" stroke-width="1"/>
+        <rect class="gbar" x="148" y="51.5" width="54" height="118.5" fill="url(#g2)"/>
+        <rect class="gbar" x="226" y="32.5" width="54" height="137.5" fill="url(#g3)"/>
+        <g font-size="13" font-weight="700" fill="#0f3f7a" text-anchor="middle">
+          <text x="97" y="50" class="cnt" data-to="22.5" data-dec="1">22.5</text><text x="175" y="44" class="cnt" data-to="23.7" data-dec="1">23.7</text><text x="253" y="25" class="cnt" data-to="27.5" data-dec="1">27.5</text>
+        </g>
+        <text x="176" y="192" font-size="10" fill="#26313f" text-anchor="middle">No. of patients = 111,629</text>
+      </svg>
+      <div class="legend"><span><i style="background:#cdebfd;border:1px solid #9fd2f3"></i>Ginkgo biloba</span><span><i style="background:#3fb0ef"></i>Systemic corticosteroids</span><span><i style="background:#2774bf"></i>Pentoxifylline</span></div>
+    </div>
+    <div class="callout rv">Association between Ginkgo biloba extract (Gbe) prescription, compared with systemic corticosteroid (CS) and pentoxifylline prescription, and repeat consultation due to tinnitus within 15–365 days after therapy initiation.</div>
+  </div>
+
+  <span class="anchor" id="s-dose"></span>
+  <div class="sec white s-sec"><span class="ix">03</span>
+    <h2><span class="rl"></span>Dose and use</h2>
+    <div class="dosebig rv">
+      <img src="img/capsule.png" alt="">
+      <div class="micro">Dose</div>
+      <div class="n">1–2 <span>times daily</span></div>
+    </div>
+    <p style="margin-top:14px">Saginkgo helps alleviate <b>vertigo and tinnitus</b>, while improving symptoms of <b>dizziness and fatigue</b>.</p>
+  </div>
+
+  <span class="anchor" id="s-ben"></span>
+  <div class="sec s-sec"><span class="ix">04</span>
+    <h2><span class="rl"></span>Benefits</h2>
+    <div class="grid">
+      <div class="g wide rv"><div class="gi"><div class="im" style="background-image:url(img/saginkgo-pack.png)"></div><div class="tx">Saginkgo 120 mg<br><span style="font-weight:400;color:#69757e;font-size:12.5px">Ginkgo biloba leaf extract</span></div></div></div>
+      <div class="g rv"><div class="gi"><div class="im" style="background-image:url(img/b-vertigo.png)"></div><div class="tx">Improves vertigo and dizziness</div></div></div>
+      <div class="g rv"><div class="gi"><div class="im" style="background-image:url(img/b-antioxidant.png)"></div><div class="tx">Antioxidant</div></div></div>
+      <div class="g rv" data-sp="neuro im"><div class="gi"><div class="im" style="background-image:url(img/b-foot.png)"></div><div class="tx">Improves peripheral arterial disease and peripheral neuropathy</div></div></div>
+      <div class="g rv" data-sp="im"><div class="gi"><div class="im" style="background-image:url(img/b-fertility.png)"></div><div class="tx">Improves fertility and sexual function</div></div></div>
+      <div class="g rv" data-sp="im"><div class="gi"><div class="im" style="background-image:url(img/b-blood.png)"></div><div class="tx">Improves ocular blood flow</div></div></div>
+      <div class="g rv" data-sp="im"><div class="gi"><div class="im" style="background-image:url(img/b-eye.png)"></div><div class="tx">Improves diabetic retinopathy</div></div></div>
+      <div class="g wide rv" data-sp="neuro im"><div class="gi"><div class="im" style="background-image:url(img/b-cognitive.png)"></div><div class="tx">Improves cognitive functions, dementia and concentration</div></div></div>
+    </div>
+  </div>
+
+  <span class="anchor" id="s-ref"></span>
+  <div class="sec white s-sec"><span class="ix">05</span>
+    <h2><span class="rl"></span>References</h2>
+    <ol class="refs">
+      <li>Sokolova L, Hoerr R, Mishchenko T. Treatment of vertigo: a randomized, double-blind trial comparing efficacy and safety of Ginkgo biloba extract EGb 761 and betahistine. <i>Int J Otolaryngol.</i> 2014;2014:682439.</li>
+      <li>Langguth B, Reineke T, Burkart M, Kostev K. Ginkgo biloba extract prescriptions are associated with less frequent repeat visits to ENT doctors due to tinnitus: a retrospective cohort study. <i>Front Neurol.</i> 2024;15:1402978.</li>
+    </ol>
+    <a class="btn ghost" href="viewer.html#sag" style="border-color:#0384db;color:#0384db">Open approved flyer</a>
+  </div>
+
+  <a class="next rv" href="#/roya" data-sp="im ent"><div class="micro">In combination</div><div class="nm">Royafloxacin 500 mg<span class="ar"></span></div><img src="img/royafloxacin-500-carton.png" alt=""></a>
+  <div class="contact">
+    <div class="micro">Sato Pharma</div>
+    Unit No. 4, second floor, Building (8), next to the headquarters of the Mostaqbal Watan Party, Model (N), Square No. (1258G), Sheraton, Nozha, Cairo<br>
+    Phone: <a href="tel:+20220654930">+20 2 2065 4930</a> · Email: <a href="mailto:info@satopharma.com">info@satopharma.com</a>
+  </div>
+  <div class="base"><span class="l">Saginkgo 120 mg</span><span class="r">HCP only</span></div>
+</div>
+
+<!-- ======================= PRESENTING ======================= -->
+<div class="view" id="deck">
+  <div class="stage"><div class="track" id="track"></div></div>
+  <a class="dk-x" href="#" id="dk-x" aria-label="Close"></a>
+  <div class="dk-foot"><span id="dk-n">1 / 1</span></div>
+  <div class="dk-prog"><i id="dk-bar"></i></div>
+  <div class="dk-hint" id="dk-hint">Swipe, or tap the left or right edge. The volume keys also change slides.</div>
+</div>
+
+<!-- ======================= SEARCH ======================= -->
+<div id="find">
+  <div class="fbar"><a class="back" href="#" id="find-x" aria-label="Close search"></a><input id="q" type="search" autocomplete="off" placeholder="Search Royafloxacin and Saginkgo"></div>
+  <div class="fres" id="fres"></div>
+</div>
+
+<div id="tsz"><div class="micro">Text size</div><a data-tz="-1" href="#">A−</a><span id="tz-v">100%</span><a data-tz="1" href="#">A+</a></div>
+
+<div id="upd"><div class="t" id="upd-t"></div><div class="b" id="upd-b"></div></div>
+<div id="toast"></div>
+
+<a id="fab" href="#/present" aria-label="Present"><i></i><span>Present</span></a>
+
+<script src="js/app.js"></script>
+<script src="js/tools.js"></script>
+<script src="web.js"></script>
+</body>
+</html>
